@@ -1,28 +1,23 @@
 var AppRouter = Backbone.Router.extend({
   initialize: function() {
-    console.log('routes have started')
+    console.log('routes have started');
   },
   routes: {
-    '' : 'index',
-    'test': 'test',
-    'new' : 'new'
+    '':'home',
+    'new':'new',
   },
 
-  test: function () {
-    this.loadView(new testView);
-    this.view.render(); 
-    console.log('home route');   
-    
+  home: function() {
+    this.loadView(new AppView());
+    this.view.render();
   },
 
   new: function() {
-    this.loadView(new AddEntryView());
+    this.loadView(new newView());
   },
 
   loadView: function(view) {
     this.view && this.view.remove();
     this.view = view;
-    console.log('view loaded');
-
   }
 });

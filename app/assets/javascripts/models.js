@@ -1,15 +1,15 @@
-var Entry = Backbone.Model.extend({
+var Blog = Backbone.Model.extend({
   urlRoot: '/entries',
   defaults: function() {
     return {
-      title: 'Title',
-      content: 'Content',
+      title: 'title',
+      content: 'content',
     };
   },
   initialize: function() {
-    console.log('entry has started');
+    console.log('model initialized!');
   },
   toJSON: function() {
-    return {entry: this.attributes};
+    return {blog: this.attributes};
   }
 });

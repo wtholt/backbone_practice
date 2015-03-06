@@ -1,6 +1,6 @@
-var EntryCollection = Backbone.Collection.extend({
+var BlogCollection = Backbone.Collection.extend({
   url: '/entries',
   initialize: function() {
-    console.log('entry collection has started')
+    console.log('blog collection');
   }
 });

@@ -5,6 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <script type="text/template" id="newForm">
+    <form class="createBlog">
+      <label for="title">Title</label>
+      <input type="text" name="title" placeholder="Title">
+      <label for="content">Content</label>
+      <textarea type="text" name="content" placeholder="Blog"></textarea>
+      <button type="submit">Create Blog</button>
+    </form>
+  </script>
 </head>
 <body>
 

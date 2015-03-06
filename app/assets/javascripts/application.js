@@ -20,4 +20,4 @@
 //= require collections
 //= require views
 //= require routes
-//= require_tree .
+//= require_self
